@@ -8,18 +8,22 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="saveFileTest"
 run/main_scene="res://node_2d.tscn"
-config/features=PackedStringArray("4.4", "GL Compatibility")
+config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-label="*res://label.gd"
-clicker="*res://clicker.gd"
-dataSave="*res://dataSave.gd"
+label="*res://Scripts/label.gd"
+clicker="*res://Scripts/clicker.gd"
+dataSave="*res://Scripts/dataSave.gd"
 
 [rendering]
 
