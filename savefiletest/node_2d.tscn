@@ -1,0 +1,97 @@
+[gd_scene load_steps=6 format=3 uid="uid://bheq6fpsclf0c"]
+
+[ext_resource type="Script" uid="uid://oycxfjvxs53w" path="res://label.gd" id="1_wtcfe"]
+[ext_resource type="Script" uid="uid://t0tx68tn24pb" path="res://clicker.gd" id="2_0e48y"]
+[ext_resource type="Script" uid="uid://dacyfjmllo8rw" path="res://reset.gd" id="3_0hol4"]
+[ext_resource type="Script" uid="uid://brbld42eanowi" path="res://buttonCheck.gd" id="3_epypp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_y32ns"]
+font_size = 64
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 246.0
+offset_top = 80.0
+offset_right = 911.0
+offset_bottom = 180.0
+text = "Count:"
+label_settings = SubResource("LabelSettings_y32ns")
+horizontal_alignment = 1
+script = ExtResource("1_wtcfe")
+
+[node name="clicker" type="Button" parent="."]
+offset_left = 454.0
+offset_top = 255.0
+offset_right = 725.0
+offset_bottom = 355.0
+text = "Click
+"
+script = ExtResource("2_0e48y")
+
+[node name="reset" type="Button" parent="."]
+offset_left = 752.0
+offset_top = 280.0
+offset_right = 877.0
+offset_bottom = 328.0
+text = "Reset
+"
+script = ExtResource("3_0hol4")
+
+[node name="save1" type="Button" parent="."]
+offset_left = 106.0
+offset_top = 419.0
+offset_right = 340.0
+offset_bottom = 503.0
+text = "Save to 1
+"
+script = ExtResource("3_epypp")
+
+[node name="save2" type="Button" parent="."]
+offset_left = 474.0
+offset_top = 423.0
+offset_right = 705.0
+offset_bottom = 504.0
+text = "Save to 2
+"
+
+[node name="save3" type="Button" parent="."]
+offset_left = 822.0
+offset_top = 422.0
+offset_right = 1049.0
+offset_bottom = 501.0
+text = "Save to 3
+"
+
+[node name="load1" type="Button" parent="."]
+offset_left = 106.0
+offset_top = 526.0
+offset_right = 340.0
+offset_bottom = 610.0
+text = "Load 1
+"
+
+[node name="load2" type="Button" parent="."]
+offset_left = 474.0
+offset_top = 530.0
+offset_right = 705.0
+offset_bottom = 611.0
+text = "Load 2
+"
+
+[node name="load3" type="Button" parent="."]
+offset_left = 822.0
+offset_top = 529.0
+offset_right = 1049.0
+offset_bottom = 608.0
+text = "Load 3
+"
+
+[connection signal="pressed" from="clicker" to="clicker" method="_on_pressed"]
+[connection signal="pressed" from="reset" to="reset" method="_on_pressed"]
+[connection signal="pressed" from="save1" to="save1" method="_on_pressed"]
+[connection signal="pressed" from="save2" to="save1" method="_on_save_2_pressed"]
+[connection signal="pressed" from="save3" to="save1" method="_on_save_3_pressed"]
+[connection signal="pressed" from="load1" to="save1" method="_on_load_1_pressed"]
+[connection signal="pressed" from="load2" to="save1" method="_on_load_2_pressed"]
+[connection signal="pressed" from="load3" to="save1" method="_on_load_3_pressed"]
